@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#FFFF0000"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#FF00FF00"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#FF0000FF"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BottomAppBar 는 CoordinatorLayout 에서만 동작함 -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/purple_500"
+        android:theme="@style/BAB">
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- BAB에 붙을 FAB   -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/bab"
+        android:src="@drawable/ic_shopping_cart_24"
+        android:onClick="clickFAB"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

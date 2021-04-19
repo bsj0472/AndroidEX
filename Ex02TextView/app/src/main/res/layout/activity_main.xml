@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CCEDF1"
+    tools:context=".MainActivity">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello world!"
+        android:textSize="30sp"
+        android:textColor="#0000FF"
+        android:textStyle="bold|italic"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFF00"/>
+
+    <!--  visibility 속성  -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <!-- 배경 이미지 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="nice"
+        android:background="@drawable/koala"/>
+
+    <!-- 정렬 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gravity"
+        android:gravity="right"
+        android:background="#FFFFFF"
+        android:padding="8dp"/>
+
+    <!-- 정렬 : layout_gravity -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice"
+        android:background="#00FF00"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- autoLink 속성 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="www.naver.com"
+        android:autoLink="web"/>
+
+    <!-- 글씨를 xml리소스(strings.xml)로 설정하기 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_text"/>
+
+    <!-- 글꼴(폰트) 지정 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice to meet you."
+        android:textSize="24sp"
+        android:fontFamily="@font/billabong"/>
+
+
+</LinearLayout>

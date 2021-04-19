@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- TableLayout은 기본적으로 LinearLayout을 상속해서 만들어져서 뷰들이 겹쳐지지 않음.-->
+
+    <!-- orientation이 vertical 인 LinearLayout같은 것임 -->
+    <TableLayout
+        android:stretchColumns="*"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <!-- 테이블레이아웃 안에있는 뷰들을 별도의 width, height을 지정하지 않아도 에러 아님.       -->
+        <!-- 기본적으로 가로/세로 가 wrap_content 사이즈가 됨      -->
+
+        <!--  한줄을 가지는 레이아웃      -->
+        <TableRow>
+            <Button android:text="1"/>
+            <Button/>
+            <Button/>
+        </TableRow>
+
+        <TableRow>
+            <Button/>
+            <Button android:layout_column="2"/>
+        </TableRow>
+
+        <TableRow>
+            <Button/>
+            <!-- 셀 병합 (칸합치기) -->
+            <Button android:layout_span="2"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <TableLayout
+        android:shrinkColumns="*"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/b1"/>
+            <Button android:id="@+id/b2"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

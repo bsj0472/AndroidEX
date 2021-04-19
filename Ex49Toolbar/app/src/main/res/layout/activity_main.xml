@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- ActionBar를 대체할 제목줄 뷰 -->
+    <!-- .java 에서 이 툴바가 제목줄을 대체한다고 명시해야만 함.   -->
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/purple_500"-->
+<!--        app:titleTextColor="@color/white"/>-->
+<!--    -->
+
+    <!-- 툴바만의 고유한 테마지정도 가능함  -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Toolbar"
+        app:titleTextColor="@color/white"
+        android:layout_margin="16dp"/>
+
+
+
+    <!-- Content 영역 뷰   -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+    </RelativeLayout>
+
+</LinearLayout>
